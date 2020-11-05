@@ -1,0 +1,31 @@
+<head>Checking account withdrawal service</head>
+<div class="container-fluid">
+    <form [formGroup]="withdrawalForm" (ngSubmit)="onWithdrawButtonPressed()">
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <mat-label>Enter account number </mat-label>
+                    <input matInput type="text" formControlName="accountNumber">
+                </mat-form-field>
+            </div>
+
+
+            <div class="col-6">
+                <mat-form-field>
+                    <mat-label>Enter amount </mat-label>
+                    <input matInput type="number" formControlName="amount">
+                </mat-form-field>
+            </div>
+            <div class="col-12">
+
+            </div>
+
+
+
+        </div>
+        <div>
+            <button class="add-button" mat-raised-button color="grey" type="submit">Withdraw</button>
+        </div>
+    </form>
+
+</div>

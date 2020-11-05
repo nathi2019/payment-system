@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Transaction #ID</th>
+        <th scope="col">Transction Type</th>
+        <th scope="col">Date</th>
+        <th scope="col">To/From</th>
+        <th scope="col">amout</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions; let pos=index">
+        <th scope="row">{{pos+1}}</th>
+        <td>{{transaction.transactionNumber}}</td>
+        <td>{{transaction.transactionType}}</td>
+        <td>{{transaction.transactionDate}}</td>
+        <td>{{transaction.subjectAccountNumber}}</td>
+        <td>{{transaction.amount}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,19 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Account number</th>
+      <th scope="col">Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let account of accounts; let pos=index">
+      <th scope="row">{{pos+1}}</th>
+      <td>{{account.accountHolder.firstName+' '+account.accountHolder.lastName}}</td>
+      <td> <a [routerLink]="['account-detail']" (click)="onAccountLinkPressed(account.accountEntries)">{{account.accountNumber}}</a></td>
+      <td>{{account.balance}}</td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

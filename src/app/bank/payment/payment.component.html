@@ -1,0 +1,27 @@
+<head>Payment History</head>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Transaction #</th>
+        <th scope="col">Order #</th>
+        <th scope="col">Paying card</th>
+        <th scope="col">Date</th>
+        <th scope="col">Recipient Account #</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payments; let pos=index">
+        <th scope="row">{{pos+1}}</th>
+        <td>{{payment.transactionId}}</td>
+        <td>{{payment.orderNumber}}</td>
+        <td>{{payment.payingCardNumber}}</td>
+        <td>{{payment.paymentDate}}</td>
+        <td>{{payment.recipientAccountNumber}}</td>
+        <td>{{payment.amount}}</td>
+        <td>{{payment.status}}</td>
+      </tr>
+    </tbody>
+  </table>
